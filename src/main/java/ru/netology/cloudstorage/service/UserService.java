@@ -2,19 +2,14 @@ package ru.netology.cloudstorage.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.netology.cloudstorage.entity.FilrName;
 import ru.netology.cloudstorage.entity.User;
 import ru.netology.cloudstorage.repository.RoleRepository;
 import ru.netology.cloudstorage.repository.UsersRepository;
 import ru.netology.cloudstorage.security.JwtTokenProvider;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 @Slf4j //для логирования

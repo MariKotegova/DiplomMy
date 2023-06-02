@@ -56,7 +56,7 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
                .and()
                .apply(new JwtConfigurer(jwtTokenProvider));
 
-
+          http.logout().logoutUrl("/logout");
 
     }
 }

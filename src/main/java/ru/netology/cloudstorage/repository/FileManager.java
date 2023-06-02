@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface FileManager extends JpaRepository<FileUser, Long> {
    List<FileUser> findAllByDeleted(int deleted);
+   FileUser findByFilenameAndDeleted(String filename, int deleted);
 }

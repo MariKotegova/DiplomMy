@@ -2,11 +2,12 @@ create schema if not exists cloudStorage;
 
 create table if not exists cloudStorage.files
 (
-    file_id     int primary key auto_increment,
-    file_name   char(200) not null,
-    size    long       not null,
-    content     longblob  not null,
-    deleted     int
+    id     int primary key auto_increment,
+    filename   varchar(255) not null,
+    size    int       not null,
+
+    deleted     int,
+    path   varchar(255) not null
 );
 create table if not exists cloudStorage.roles(
                                                  id int primary key auto_increment,

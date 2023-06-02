@@ -18,26 +18,27 @@ public class FileUser {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name = "file_id")
-        private int fileId;
+        @Column(name = "id")
+        private int id;
 
-        @Column(name = "file_name", nullable = false, length = 200)
-        private String fileName;
+        @Column(name = "filename", nullable = false, length = 200)
+        private String filename;
 
         @Column(name = "size", nullable = false)
-        private Long size;
-        @Column(name = "content")
-        private byte[] content;
+        private int size;
+ //       @Column(name = "content")
+ //       private byte[] content;
 
         @Column(name = "deleted")
         @JsonIgnore
         private int deleted;
 
-        @ManyToOne
-        @JoinTable(name = "cloudStorage.users",
-                joinColumns = {@JoinColumn(name = "file_id", referencedColumnName = "file_id")})
-        private User owner;
+  //      @ManyToOne
+  //      @JoinTable(name = "cloudStorage.users",
+  //              joinColumns = {@JoinColumn(name = "file_id", referencedColumnName = "file_id")})
+  //      private User owner;
 
+        @Column(name = "path")
         @JsonIgnore
         private String path;
 

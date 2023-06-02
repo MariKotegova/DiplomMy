@@ -28,18 +28,18 @@ public class User extends BaseEntity{
     inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")})
     private List<Role> roles;
 
- @OneToMany
-    @JoinTable(name = "cloudStorage.files",
-            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")})
-    private List<FileUser> files;
-
-    public List<FilrName> getShellFiles() {
-        List<FilrName> result = new ArrayList<>();
-        files.forEach(x -> result.add(new FilrName(x)));
-
-        return result;
-    }
-
+// @OneToMany
+//    @JoinTable(name = "cloudStorage.files",
+//            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")})
+//    private List<FileUser> files;
+//
+//    public List<FilrName> getShellFiles() {
+//        List<FilrName> result = new ArrayList<>();
+//        files.forEach(x -> result.add(new FilrName(x)));
+//
+//        return result;
+//    }
+//
 public String toString(){
     return login;
 }
